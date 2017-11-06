@@ -1,0 +1,13 @@
+PLUGIN: advanced custom fields
+image_background_field1
+background-image:url('http://localhost/wordpress/wp-content/uploads/2017/10/Bildschirmfoto-2017-10-19-um-11.11.51.png');
+<?php the_field("image_background_field1"); ?>
+
+33423755+julman33@users.noreply.github.com
+
+$image = get_field('image_background_field1');
+$size = 'full';
+
+if ( $image ) {
+	echo wp_get_attachment_image( $image, $size );
+}
